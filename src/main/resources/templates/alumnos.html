@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Alta de alumno</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<h1>Alta de alumno</h1>
+	    <form action="#" th:action="@{/alumnos}" th:object="${alumno}" method="post">
+	        <p>Nombre: <input type="text" th:field="*{nombre}" size="30" maxlength="45" autofocus="autofocus" required="required"/></p>
+	        <p>Apellido: <input type="text" th:field="*{apellido}" size="30" maxlength="45" required="required"/></p>
+	        <p>Curso:
+	        	<select th:field="*{idCurso}">
+                        <option th:each="curso : ${cursos}" th:value="${curso.getIdCurso()}" th:field="*{idCurso}"
+                                th:text="${curso.nombre_curso}"></option>
+                </select>
+	        	
+	        </p>
+	        <p>DNI: <input type="number" min="1" max="99999999" th:field="*{dni}" size="30" required="required"/></p>
+	        <p>Teléfono: <input type="text" th:field="*{telefono}" size="30" maxlength="10" required="required"/></p>
+	        <p>Mail: <input type="text" th:field="*{mail}" size="30" maxlength="45" required="required"/></p>
+	        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+	    </form>
+	    <br>
+	    <p><a th:href="@{/principal}">Volver al menú principal</a></p>
+	</body>
+</html>

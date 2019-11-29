@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Alta de alumno</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<h1>Alta Exitosa</h1>
+	    <p th:text="'Nombre: ' + ${alumno.nombre}" />
+	    <p th:text="'Apellido: ' + ${alumno.apellido}" />
+	    <p th:text="'DNI: ' + ${alumno.dni}" />
+	    <p th:text="'Teléfono: ' + ${alumno.telefono}" />
+	    <p th:text="'Mail: ' + ${alumno.mail}" />
+	    <p th:text="'Curso: ' + ${curso.nombre_curso}" />
+	    <a href="/alumnos">Nueva de alumno</a>
+	    <p><a th:href="@{/principal}">Volver al menú principal</a></p>   
+	</body>
+</html>

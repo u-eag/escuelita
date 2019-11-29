@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+	<head>
+	    <title>Búsqueda de Cursos por Temas</title>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	</head>
+	<body>
+		<h1>Búsqueda de Cursos por Temas</h1>
+		<form action="#" th:action="@{/cursos}" th:object="${temaElegido}" method="post">
+		    <select th:field="*{idTema}">
+		    <option th:each="tema : ${temas}"
+		            th:value="${tema.idTema}"
+		            th:text="${tema.nombre_tema}"
+		            th:field="*{idTema}"></option>
+			</select>
+			<input type="submit" value="Submit">
+		</form>
+			
+		<br>
+		<p>Curso encontrado:</p>
+		<p><span th:text= "${cursoEncontrado.nombre_curso}"></span></p>
+
+		<br>
+		<p><a th:href="@{/principal}">Volver al menú principal</a></p>
+	</body>
+</html>

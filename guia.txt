@@ -1,0 +1,26 @@
+﻿*************** CODEAR TODO EN INGLÉS *************************
+
+1. registro de profesores: alta, modificación y baja
+
+2. en el alta de alumno: 
+- poder asignar un curso / varios
+- modificar, dar de baja
+
+3. en la búsqueda de cursos:
+- lista por defecto todos los cursos
+- que un tema esté en más de un curso
+
+-------------------------------------------
+
+4. spring security
+5. front piola
+6. validar hasta el ogt
+
+7. hacer tests
+
+8. agregar un readme desde git 
+//  te genera git con un par de capturas y como instalarlo
+------------
+
+super mega bonus: hostear la base en un servidor
++ hostear las páginas web en un servidor
